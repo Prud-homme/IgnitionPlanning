@@ -67,3 +67,11 @@ ALTER TABLE equipements
 ADD COLUMN id_devio INT,
 ADD COLUMN nom_devio TEXT
 ```
+
+## Vider une table SQL
+
+Pour vider une table sql il faudra entrer la commande `TRUNCATE TABLE nom_table` où le nom_table correspond au nom de la table à vider.
+
+## Supprimer une table SQL
+
+Pour supprimer une table sql il faudra entrer la commande `DROP TABLE nom_table` où le nom_table correspond au nom de la table à vider.
