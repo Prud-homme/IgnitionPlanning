@@ -2,24 +2,25 @@
 
 ## Menu
 
-* [Requêtes basiques](#requêtes-basiques-⬆️)
-  - [Creation des tables SQL](#creation-des-tables-sql-⬆️)
-    - [Utilisation de l'écriture des plannings en modbus](#utilisation-de-l'écriture-des-plannings-en-modbus-⬆️)
-    - [Utilisation de l'écriture des plannings avec devIO](#utilisation-de-l'écriture-des-plannings-avec-devio-⬆️)
-  - [Vider une table SQL](#vider-une-table-sql-⬆️)
-  - [Supprimer une table SQL](#supprimer-une-table-sql-⬆️)
-* [Requêtes avancées](#requêtes-avancées-⬆️)
-  - [Equipement déjà présent dans la base de données](#equipement-déjà-présent-dans-la-base-de-données-⬆️)
-    - [Ajouter un numéro modbus](#ajouter-un-numéro-modbus-⬆️)
-    - [Ajouter un id et un nom devio](#ajouter-un-id-et-un-nom-devio-⬆️)
+* [Requêtes basiques](#requêtes-basiques)
+  - [Creation des tables SQL](#creation-des-tables-sql)
+    - [Utilisation de l'écriture des plannings en modbus](#utilisation-de-l'écriture-des-plannings-en-modbus)
+    - [Utilisation de l'écriture des plannings avec devIO](#utilisation-de-l'écriture-des-plannings-avec-devio)
+  - [Vider une table SQL](#vider-une-table-sql)
+  - [Supprimer une table SQL](#supprimer-une-table-sql)
+* [Requêtes avancées](#requêtes-avancées)
+  - [Equipement déjà présent dans la base de données](#Equipement-déjà-présent-dans-la-base-de-données)
+    -[Ajouter un numéro modbus](#ajouter-un-numéro-modbus)
+    -[Ajouter un id et un nom devio](#ajouter-un-id-et-un-nom-devio)
+* [Ajouter un équipement à la base de données](#ajouter-un-équipement-à-la-base-de-données)
 
-## Requêtes basiques [⬆️](#menu "Retour au menu")
+## Requêtes basiques
 
 ℹ️ Il est possible d'entrer des requêtes SQL via la fonctionnalité **Database Query Browser** *(dans Tools)* d'Ignition. Afin d'executer une requête SQL, il faut entrer la commande dans la zone à gauche du bouton *Execute* puis cliquer sur ce même bouton.
 
 Dans cette rubrique, les requêtes pourront être simplement copier-coller et executer.
 
-### Creation des tables SQL [⬆️](#menu "Retour au menu")
+### Creation des tables SQL
 
 ```
 CREATE TABLE equipements
@@ -62,7 +63,7 @@ CREATE TABLE plannings_exception
 )
 ```
 
-#### Utilisation de l'écriture des plannings en modbus [⬆️](#menu "Retour au menu")
+#### Utilisation de l'écriture des plannings en modbus
 
 ```
 CREATE TABLE devices
@@ -77,7 +78,7 @@ ALTER TABLE equipements
 ADD COLUMN num_mb INT
 ```
 
-#### Utilisation de l'écriture des plannings avec devIO [⬆️](#menu "Retour au menu")
+#### Utilisation de l'écriture des plannings avec devIO
 
 ```
 ALTER TABLE equipements
@@ -85,25 +86,25 @@ ADD COLUMN id_devio INT,
 ADD COLUMN nom_devio TEXT
 ```
 
-### Vider une table SQL [⬆️](#menu "Retour au menu")
+### Vider une table SQL
 
 Pour vider une table sql il faudra entrer la commande `TRUNCATE TABLE nom_table` où le nom_table correspond au nom de la table à vider.
 
 🚨 Attention : les données seront supprimées.
 
-### Supprimer une table SQL [⬆️](#menu "Retour au menu")
+### Supprimer une table SQL
 
 Pour supprimer une table sql il faudra entrer la commande `DROP TABLE nom_table` où le nom_table correspond au nom de la table à vider.
 
 🚨 Attention : les données seront supprimées.
 
-## Requêtes avancées [⬆️](#menu "Retour au menu")
+## Requêtes avancées
 
 ⚠️ Dans cette rubrique, il sera nécessaire de modifier certaines informations avant d'executer la requête : numero_modbus, nom_site, nom_groupe, nom_equipement, numero_id_devio, nom_devio.
 
-### Equipement déjà présent dans la base de données [⬆️](#menu "Retour au menu")
+### Equipement déjà présent dans la base de données
 
-#### Ajouter un numéro modbus [⬆️](#menu "Retour au menu")
+#### Ajouter un numéro modbus 
 
 ```
 UPDATE equipements 
@@ -116,9 +117,7 @@ AND equipement = 'nom_equipement'
 
 Si le site n'est pas présent dans la table devices, il faudra également entrer la commande suivante `Insert into devices (nom_device, nom_site) Values ('nom_device', 'nom_site')`
 
-✨ *Une solution graphique sera proposé via une View Perspective d'Ignition.*
-
-#### Ajouter un id et un nom devio [⬆️](#menu "Retour au menu")
+#### Ajouter un id et un nom devio
 
 ```
 UPDATE equipements 
@@ -129,5 +128,7 @@ WHERE site = 'nom site'
 AND groupe = 'nom groupe'
 AND equipement = 'non_equipement'
 ```
+
+## Ajouter un équipement à la base de données
 
 ✨ *Une solution graphique sera proposé via une View Perspective d'Ignition.*
