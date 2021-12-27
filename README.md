@@ -10,8 +10,8 @@
   - [Supprimer une table SQL](#supprimer-une-table-sql)
 * [Requêtes avancées](#requêtes-avancées)
   - [Equipement déjà présent dans la base de données](#Equipement-déjà-présent-dans-la-base-de-données)
-    -[Ajouter un numéro modbus](#ajouter-un-numéro-modbus)
-    -[Ajouter un id et un nom devio](#ajouter-un-id-et-un-nom-devio)
+    - [Ajouter un numéro modbus](#ajouter-un-numéro-modbus)
+    - [Ajouter un id et un nom devio](#ajouter-un-id-et-un-nom-devio)
 * [Ajouter un équipement à la base de données](#ajouter-un-équipement-à-la-base-de-données)
 
 ## Requêtes basiques
