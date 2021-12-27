@@ -2,6 +2,7 @@
 
 ## Menu
 
+* [Gestion des équipements](#gestion-des-équipements)
 * [Requêtes basiques](#requêtes-basiques)
   - [Creation des tables SQL](#creation-des-tables-sql)
     - [Utilisation de l'écriture des plannings en modbus](#utilisation-de-l'écriture-des-plannings-en-modbus)
@@ -13,6 +14,10 @@
     - [Ajouter un numéro modbus](#ajouter-un-numéro-modbus)
     - [Ajouter un id et un nom devio](#ajouter-un-id-et-un-nom-devio)
 * [Ajouter un équipement à la base de données](#ajouter-un-équipement-à-la-base-de-données)
+
+## Gestion des équipements
+
+✨ *La view Utils/SQL_Planning permet de créer les tables nécessaire à l'utilisation du module Planning. Il permet également d'activer le support modbus ou devio. L'ajout d'équipement à la base de données peut se faire également par le biais de cette view*
 
 ## Requêtes basiques
 
@@ -115,7 +120,10 @@ AND groupe = 'nom_groupe'
 AND equipement = 'nom_equipement'
 ```
 
-Si le site n'est pas présent dans la table devices, il faudra également entrer la commande suivante `Insert into devices (nom_device, nom_site) Values ('nom_device', 'nom_site')`
+Si le site n'est pas présent dans la table devices, il faudra également entrer la commande suivante : 
+```
+Insert into devices (nom_device, nom_site) Values ('nom_device', 'nom_site')
+```
 
 #### Ajouter un id et un nom devio
 
@@ -128,7 +136,3 @@ WHERE site = 'nom site'
 AND groupe = 'nom groupe'
 AND equipement = 'non_equipement'
 ```
-
-## Ajouter un équipement à la base de données
-
-✨ *Une solution graphique sera proposé via une View Perspective d'Ignition.*
