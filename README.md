@@ -1,10 +1,23 @@
 # Module Planning pour Ignition
 
+## Menu
+
+* [Requêtes basiques](#requêtes-basiques)
+  - [Creation des tables SQL](#creation-des-tables-sql)
+    - [Utilisation de l'écriture des plannings en modbus](#utilisation-de-l'écriture-des-plannings-en-modbus)
+    - [Utilisation de l'écriture des plannings avec devIO](#utilisation-de-l'écriture-des-plannings-avec-devio)
+  - [Vider une table SQL](#vider-une-table-sql)
+  - [Supprimer une table SQL](#supprimer-une-table-sql)
+* [Requêtes avancées](#requêtes-avancées)
+  - [Equipement déjà présent dans la base de données](#Equipement-déjà-présent-dans-la-base-de-données)
+    -[Ajouter un numéro modbus](#ajouter-un-numéro-modbus)
+    -[Ajouter un id et un nom devio](#ajouter-un-id-et-un-nom-devio)
+
 ## Requêtes basiques
 
 ℹ️ Il est possible d'entrer des requêtes SQL via la fonctionnalité **Database Query Browser** *(dans Tools)* d'Ignition. Afin d'executer une requête SQL, il faut entrer la commande dans la zone à gauche du bouton *Execute* puis cliquer sur ce même bouton.
 
-Dans cette rubrique, les commandes pourront être simplement copier-coller.
+Dans cette rubrique, les requêtes pourront être simplement copier-coller et executer.
 
 ### Creation des tables SQL
 
@@ -49,7 +62,7 @@ CREATE TABLE plannings_exception
 )
 ```
 
-Pour utiliser l'écriture des plannings en modbus, entrer les commandes suivantes:
+#### Utilisation de l'écriture des plannings en modbus
 
 ```
 CREATE TABLE devices
@@ -64,7 +77,7 @@ ALTER TABLE equipements
 ADD COLUMN num_mb INT
 ```
 
-Pour utiliser l'écriture des plannings avec devIO, entrer la commandes suivante:
+#### Utilisation de l'écriture des plannings avec devIO
 
 ```
 ALTER TABLE equipements
@@ -84,7 +97,7 @@ Pour supprimer une table sql il faudra entrer la commande `DROP TABLE nom_table`
 
 🚨 Attention : les données seront supprimées.
 
-## Commandes avancées
+## Requêtes avancées
 
 ⚠️ Dans cette rubrique, il sera nécessaire de modifier certaines informations avant d'executer la requête : numero_modbus, nom_site, nom_groupe, nom_equipement, numero_id_devio, nom_devio.
 
@@ -103,6 +116,8 @@ AND equipement = 'nom_equipement'
 
 Si le site n'est pas présent dans la table devices, il faudra également entrer la commande suivante `Insert into devices (nom_device, nom_site) Values ('nom_device', 'nom_site')`
 
+✨ *Une solution graphique sera proposé via une View Perspective d'Ignition.*
+
 #### Ajouter un id et un nom devio
 
 ```
@@ -115,16 +130,4 @@ AND groupe = 'nom groupe'
 AND equipement = 'non_equipement'
 ```
 
-### Equipement non présent dans la base de données
-
-#### Ajouter l'équipement avec un numéro modbus 
-
-```
-...
-```
-
-#### Ajouter l'équipement avec un id et un nom devio
-
-```
-...
-```
+✨ *Une solution graphique sera proposé via une View Perspective d'Ignition.*
