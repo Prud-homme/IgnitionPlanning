@@ -13,13 +13,13 @@
     -[Ajouter un numéro modbus](#ajouter-un-numéro-modbus)
     -[Ajouter un id et un nom devio](#ajouter-un-id-et-un-nom-devio)
 
-## Requêtes basiques
+## Requêtes basiques [⬆️](#menu)
 
 ℹ️ Il est possible d'entrer des requêtes SQL via la fonctionnalité **Database Query Browser** *(dans Tools)* d'Ignition. Afin d'executer une requête SQL, il faut entrer la commande dans la zone à gauche du bouton *Execute* puis cliquer sur ce même bouton.
 
 Dans cette rubrique, les requêtes pourront être simplement copier-coller et executer.
 
-### Creation des tables SQL
+### Creation des tables SQL [⬆️](#menu)
 
 ```
 CREATE TABLE equipements
@@ -62,7 +62,7 @@ CREATE TABLE plannings_exception
 )
 ```
 
-#### Utilisation de l'écriture des plannings en modbus
+#### Utilisation de l'écriture des plannings en modbus [⬆️](#menu)
 
 ```
 CREATE TABLE devices
@@ -77,7 +77,7 @@ ALTER TABLE equipements
 ADD COLUMN num_mb INT
 ```
 
-#### Utilisation de l'écriture des plannings avec devIO
+#### Utilisation de l'écriture des plannings avec devIO [⬆️](#menu)
 
 ```
 ALTER TABLE equipements
@@ -85,25 +85,25 @@ ADD COLUMN id_devio INT,
 ADD COLUMN nom_devio TEXT
 ```
 
-### Vider une table SQL
+### Vider une table SQL [⬆️](#menu)
 
 Pour vider une table sql il faudra entrer la commande `TRUNCATE TABLE nom_table` où le nom_table correspond au nom de la table à vider.
 
 🚨 Attention : les données seront supprimées.
 
-### Supprimer une table SQL
+### Supprimer une table SQL [⬆️](#menu)
 
 Pour supprimer une table sql il faudra entrer la commande `DROP TABLE nom_table` où le nom_table correspond au nom de la table à vider.
 
 🚨 Attention : les données seront supprimées.
 
-## Requêtes avancées
+## Requêtes avancées [⬆️](#menu)
 
 ⚠️ Dans cette rubrique, il sera nécessaire de modifier certaines informations avant d'executer la requête : numero_modbus, nom_site, nom_groupe, nom_equipement, numero_id_devio, nom_devio.
 
-### Equipement déjà présent dans la base de données
+### Equipement déjà présent dans la base de données [⬆️](#menu)
 
-#### Ajouter un numéro modbus 
+#### Ajouter un numéro modbus [⬆️](#menu)
 
 ```
 UPDATE equipements 
@@ -118,7 +118,7 @@ Si le site n'est pas présent dans la table devices, il faudra également entrer
 
 ✨ *Une solution graphique sera proposé via une View Perspective d'Ignition.*
 
-#### Ajouter un id et un nom devio
+#### Ajouter un id et un nom devio [⬆️](#menu)
 
 ```
 UPDATE equipements 
