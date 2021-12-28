@@ -23,16 +23,14 @@
 
 ## Gestion des équipements
 
-<div style="text-align:center">
-<img src="https://raw.githubusercontent.com/Prud-homme/image-data-bank/main/HTTP/overview.png" alt="SQL_Planning" width="450" height="auto" />
-</div>
+![SQL_Planning]("https://raw.githubusercontent.com/Prud-homme/image-data-bank/main/HTTP/overview.png")
 
 ✨ La view Utils/SQL_Planning permet de :
 * créer les tables nécessaire à l'utilisation du module Planning
 * activer le support modbus ou devio
 * ajouter un équipement à la base de données
 * ajouter une association entre un device et un site à la base de données
-* ne pas utiliser le *Database Query Browser*
+* ne pas utiliser le *Database Query Browser* ou réaliser des scripts Python
 
 ### Description
 
