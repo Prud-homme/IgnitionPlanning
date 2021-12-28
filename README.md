@@ -19,6 +19,8 @@
     - [Ajouter un id et un nom devio](#ajouter-un-id-et-un-nom-devio)
 * [Ajouter un équipement à la base de données](#ajouter-un-équipement-à-la-base-de-données)
 
+ℹ️ Les parties Requêtes basiques et avancées sont présente à titre d'informations.
+
 ## Gestion des équipements
 
 <div style="text-align:center">
@@ -30,6 +32,7 @@
 * activer le support modbus ou devio
 * ajouter un équipement à la base de données
 * ajouter une association entre un device et un site à la base de données
+* ne pas utiliser le *Database Query Browser*
 
 ### Description
 
