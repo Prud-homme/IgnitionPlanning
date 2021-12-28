@@ -23,7 +23,7 @@
 
 ## Gestion des équipements
 
-![SQL_Planning]("https://raw.githubusercontent.com/Prud-homme/image-data-bank/main/HTTP/overview.png")
+![SQL_Planning](https://raw.githubusercontent.com/Prud-homme/image-data-bank/main/HTTP/overview.png)
 
 ✨ La view Utils/SQL_Planning permet de :
 * créer les tables nécessaire à l'utilisation du module Planning
