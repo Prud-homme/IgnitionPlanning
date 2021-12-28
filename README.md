@@ -54,6 +54,8 @@
 
 ### Utilisation
 
+https://user-images.githubusercontent.com/63802082/147588831-24dde402-4ae1-4a2f-a479-16de60039125.mp4
+
 ℹ️ Une fois la view ouverte avec le designer, passer en preview mode (*Play*) afin de pouvoir effectuer des cliques sur les boutons.
 
 ⚠️ Si les tables *equipements, plannings, plannings_exception* ne sont pas présente, il faut les créer via le bouton *Créer les tables* avant toute autre action. 
