@@ -3,6 +3,10 @@
 ## Menu
 
 * [Gestion des équipements](#gestion-des-équipements)
+  - [Description](#description)
+    - [Initialisation](#initialisation)
+    - [Mise à jour des tables](#mise-à-jour-des-tables)
+  - [Utilisation](#utilisation)
 * [Requêtes basiques](#requêtes-basiques)
   - [Creation des tables SQL](#creation-des-tables-sql)
     - [Utilisation de l'écriture des plannings en modbus](#utilisation-de-l'écriture-des-plannings-en-modbus)
@@ -17,7 +21,55 @@
 
 ## Gestion des équipements
 
-✨ *La view Utils/SQL_Planning permet de créer les tables nécessaire à l'utilisation du module Planning. Il permet également d'activer le support modbus ou devio. L'ajout d'équipement à la base de données peut se faire également par le biais de cette view*
+<div style="text-align:center">
+<img src="https://raw.githubusercontent.com/Prud-homme/image-data-bank/main/HTTP/overview.png" alt="SQL_Planning" width="450" height="auto" />
+</div>
+
+✨ La view Utils/SQL_Planning permet de :
+* créer les tables nécessaire à l'utilisation du module Planning
+* activer le support modbus ou devio
+* ajouter un équipement à la base de données
+* ajouter une association entre un device et un site à la base de données
+
+### Description
+
+* *database* (CUSTOM) : nom de la base de données qui contient les tables *equipements, plannings* et *plannings_exception*
+* le bouton _**Rafrîchir les tables**_ permet de synchroniser le premier tableau avec la table *equipements* et le second tableau avec la table *devices*
+
+#### Initialisation
+
+⚠️ Ne cliquer pas sur un des 3 boutons d'initialisation si la base de données contient déjà ce que l'on souhaite.
+
+* _**Créer les tables**_ : création des tables *equipements, plannings* et *plannings_exception* dans la base données (nécessaire à l'utilisation du module Planning)
+* _**Support Modbus**_ : ajoute la colonne *num_mb* à la table *equipements* et création de la table *devices* associant le nom d'un device au nom d'un site de la base de données (nécessaire pour écrire les plannings via Modbus)
+* _**Support DevIO**_ : ajoute les colonnes *id_devio* et *nom_devio* à la table *equipements* (nécessaire pour écrire les plannings via DevIO)
+
+#### Mise à jour des tables
+
+* _**Inclure Numero Modbus**_ : option à cocher si l'on souhaite inserer les numero Modbus
+* _**Inclure Id et Nom DevIO**_ : option à cocher si l'on souhaite inserer id_devio et nom_devio
+* _**Mettre à jour equipements et plannings**_ : insertion des équipements présent dans le tableau situé au dessus du bouton dans les tables *equipements* et *plannings*
+* _**Mettre à jour devices**_ : insertion des éléments du tableau dans la table *devices*
+
+
+### Utilisation
+
+ℹ️ Une fois la view ouverte avec le designer, passer en preview mode (*Play*) afin de pouvoir effectuer des cliques sur les boutons.
+
+⚠️ Si les tables *equipements, plannings, plannings_exception* ne sont pas présente, il faut les créer via le bouton *Créer les tables* avant toute autre action. 
+
+Si l'équipement est déjà présent, il ne sera pas de nouveau ajouter à la base de données et ainsi empêche l'apparition de doublons. Mais, il sera bien mise à jour si on lui ajoute un *num_mb*, *id_devio* ou *nom_devio*.
+
+Rafraichir les tables supprime toutes les modifications effectuées sur les tableaux qui n'ont pas été enregistré via les boutons *mise à jour*.
+
+Si l'écriture des plannings se fait via Modbus, que la colonne *num_mb* n'est pas présente dans la table *equipements* et que la table *devices* n'existe pas, il faut cliquer sur le bouton *Support Modbus*. Cliquer ensuite sur le bouton *Rafraichir les tables*.
+
+Si l'écriture des plannings se fait via DevIO, que les colonnes *id_devio* et *nom_devio* ne sont pas présente dans la table *equipements*, il faut cliquer sur le bouton *Support DevIO*. Cliquer ensuite sur le bouton *Rafraichir les tables*.
+
+Afin d'ajouter ou mettre à jour un equipement, il faudra éditer le dataset du premier tableau. *(PROPS data)*
+
+Afin d'associer un device à un site de la base de données dans le cadre de l'écriture Modbus, il faudra éditer le dataset du second tableau. *(PROPS data)*
+
 
 ## Requêtes basiques
 
