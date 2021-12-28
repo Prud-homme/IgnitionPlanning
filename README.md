@@ -52,7 +52,6 @@
 * _**Mettre à jour equipements et plannings**_ : insertion des équipements présent dans le tableau situé au dessus du bouton dans les tables *equipements* et *plannings*
 * _**Mettre à jour devices**_ : insertion des éléments du tableau dans la table *devices*
 
-
 ### Utilisation
 
 ℹ️ Une fois la view ouverte avec le designer, passer en preview mode (*Play*) afin de pouvoir effectuer des cliques sur les boutons.
@@ -63,14 +62,13 @@ Si l'équipement est déjà présent, il ne sera pas de nouveau ajouter à la ba
 
 Rafraichir les tables supprime toutes les modifications effectuées sur les tableaux qui n'ont pas été enregistré via les boutons *mise à jour*.
 
-Si l'écriture des plannings se fait via Modbus, que la colonne *num_mb* n'est pas présente dans la table *equipements* et que la table *devices* n'existe pas, il faut cliquer sur le bouton *Support Modbus*. Cliquer ensuite sur le bouton *Rafraichir les tables*.
+Si l'écriture des plannings se fait via Modbus, que la colonne *num_mb* n'est pas présente dans la table *equipements* et que la table *devices* n'existe pas, il faut cliquer sur le bouton *Support Modbus*. Cliquer ensuite sur le bouton *Rafraichir les tables*. Cocher *Inclure Modbus* si vous utiliser l'écriture via Modbus.
 
-Si l'écriture des plannings se fait via DevIO, que les colonnes *id_devio* et *nom_devio* ne sont pas présente dans la table *equipements*, il faut cliquer sur le bouton *Support DevIO*. Cliquer ensuite sur le bouton *Rafraichir les tables*.
+Si l'écriture des plannings se fait via DevIO, que les colonnes *id_devio* et *nom_devio* ne sont pas présente dans la table *equipements*, il faut cliquer sur le bouton *Support DevIO*. Cliquer ensuite sur le bouton *Rafraichir les tables*. Cocher *Inclure Id et Nom DevIO* si vous utiliser l'écriture via DevIO.
 
 Afin d'ajouter ou mettre à jour un equipement, il faudra éditer le dataset du premier tableau. *(PROPS data, cliquer sur l'icone 'Edit dataset')*
 
 Afin d'associer un device à un site de la base de données dans le cadre de l'écriture Modbus, il faudra éditer le dataset du second tableau. *(PROPS data, cliquer sur l'icone 'Edit dataset')*
-
 
 ## Requêtes basiques
 
