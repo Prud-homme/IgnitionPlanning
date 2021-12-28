@@ -67,9 +67,9 @@ Si l'écriture des plannings se fait via Modbus, que la colonne *num_mb* n'est p
 
 Si l'écriture des plannings se fait via DevIO, que les colonnes *id_devio* et *nom_devio* ne sont pas présente dans la table *equipements*, il faut cliquer sur le bouton *Support DevIO*. Cliquer ensuite sur le bouton *Rafraichir les tables*.
 
-Afin d'ajouter ou mettre à jour un equipement, il faudra éditer le dataset du premier tableau. *(PROPS data)*
+Afin d'ajouter ou mettre à jour un equipement, il faudra éditer le dataset du premier tableau. *(PROPS data, cliquer sur l'icone 'Edit dataset')*
 
-Afin d'associer un device à un site de la base de données dans le cadre de l'écriture Modbus, il faudra éditer le dataset du second tableau. *(PROPS data)*
+Afin d'associer un device à un site de la base de données dans le cadre de l'écriture Modbus, il faudra éditer le dataset du second tableau. *(PROPS data, cliquer sur l'icone 'Edit dataset')*
 
 
 ## Requêtes basiques
