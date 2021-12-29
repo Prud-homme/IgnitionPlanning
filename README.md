@@ -184,6 +184,10 @@ AND equipement = 'non_equipement'
 
 ## Renommer un site, groupe ou equipement
 
+![SQL_Rename](https://raw.githubusercontent.com/Prud-homme/image-data-bank/main/HTTP/SQL_Rename.PNG)
+
+✨ La view Utils/SQL_Rename permet de renommer un site, groupe ou equipement dans les tables equipements, plannings, plannings_exception de la base de données
+
 ### Description
 
 * *database* (CUSTOM) : nom de la base de données qui contient les tables *equipements, plannings* et *plannings_exception*
