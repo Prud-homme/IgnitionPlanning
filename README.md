@@ -4,19 +4,9 @@
 
 * [Gestion des équipements](#gestion-des-équipements)
   - [Description](#description)
-    - [Initialisation](#initialisation)
-    - [Mise à jour des tables](#mise-à-jour-des-tables)
   - [Utilisation](#utilisation)
 * [Requêtes basiques](#requêtes-basiques)
-  - [Creation des tables SQL](#creation-des-tables-sql)
-    - [Utilisation de l'écriture des plannings en modbus](#utilisation-de-l'écriture-des-plannings-en-modbus)
-    - [Utilisation de l'écriture des plannings avec devIO](#utilisation-de-l'écriture-des-plannings-avec-devio)
-  - [Vider une table SQL](#vider-une-table-sql)
-  - [Supprimer une table SQL](#supprimer-une-table-sql)
 * [Requêtes avancées](#requêtes-avancées)
-  - [Equipement déjà présent dans la base de données](#Equipement-déjà-présent-dans-la-base-de-données)
-    - [Ajouter un numéro modbus](#ajouter-un-numéro-modbus)
-    - [Ajouter un id et un nom devio](#ajouter-un-id-et-un-nom-devio)
 * [Renommer un site, groupe ou equipement](#renommer-un-site-groupe-ou-equipement)
 
 ℹ️ Les parties Requêtes basiques et avancées sont présente à titre d'informations.
