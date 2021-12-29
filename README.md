@@ -17,7 +17,7 @@
   - [Equipement déjà présent dans la base de données](#Equipement-déjà-présent-dans-la-base-de-données)
     - [Ajouter un numéro modbus](#ajouter-un-numéro-modbus)
     - [Ajouter un id et un nom devio](#ajouter-un-id-et-un-nom-devio)
-* [Ajouter un équipement à la base de données](#ajouter-un-équipement-à-la-base-de-données)
+* [Renommer un site, groupe ou equipement](#renommer-un-site,-groupe-ou-equipement)
 
 ℹ️ Les parties Requêtes basiques et avancées sont présente à titre d'informations.
 
@@ -191,3 +191,22 @@ WHERE site = 'nom site'
 AND groupe = 'nom groupe'
 AND equipement = 'non_equipement'
 ```
+
+## Renommer un site, groupe ou equipement
+
+### Description
+
+* *database* (CUSTOM) : nom de la base de données qui contient les tables *equipements, plannings* et *plannings_exception*
+* Une liste à trois choix : *site, groupe, equipement*
+* le bouton _**Renommer**_ permet d'appliquer les changements à la base de données
+* le bouton _**Rafrîchir les tables**_ permet de synchroniser les tableaux avec la base de données
+
+### Utilisation
+
+https://user-images.githubusercontent.com/63802082/147676776-d923b2e4-6f74-4e32-b32c-34fd0598940e.mp4
+
+Commencer par selectionner le filtre adapté (site, groupe, equipement) à ce qu'il faut renommer.
+
+Pour renommer, editer le second tableau et une fois terminé cliquer sur le bouton *Renommer* afin d'appliquer les changement à la base de données.
+
+Pour vérifier si les changements ont été pris en compte, il est possible de rafraichir les tableaux en cliquant sur le bouton *Rafraichir*.
