@@ -17,7 +17,7 @@
   - [Equipement déjà présent dans la base de données](#Equipement-déjà-présent-dans-la-base-de-données)
     - [Ajouter un numéro modbus](#ajouter-un-numéro-modbus)
     - [Ajouter un id et un nom devio](#ajouter-un-id-et-un-nom-devio)
-* [Renommer un site, groupe ou equipement](#renommer-un-site,-groupe-ou-equipement)
+* [Renommer un site, groupe ou equipement](#renommer-un-site-groupe-ou-equipement)
 
 ℹ️ Les parties Requêtes basiques et avancées sont présente à titre d'informations.
 
